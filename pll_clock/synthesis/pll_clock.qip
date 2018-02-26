@@ -1,0 +1,21 @@
+set_global_assignment -entity "pll_clock" -library "pll_clock" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "pll_clock" -library "pll_clock" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "pll_clock" -library "pll_clock" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "pll_clock" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../pll_clock.sopcinfo"]
+set_instance_assignment -entity "pll_clock" -library "pll_clock" -name SLD_INFO "QSYS_NAME pll_clock HAS_SOPCINFO 1 GENERATION_ID 1430843515"
+set_global_assignment -library "pll_clock" -name MISC_FILE [file join $::quartus(qip_path) "../../pll_clock.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "pll_clock" -name MISC_FILE [file join $::quartus(qip_path) "../../pll_clock.qsys"]
+
+set_global_assignment -library "pll_clock" -name VERILOG_FILE [file join $::quartus(qip_path) "pll_clock.v"]
+set_global_assignment -library "pll_clock" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "pll_clock" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "pll_clock" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "pll_clock" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/pll_clock_altpll_0.v"]
+
+set_global_assignment -entity "altera_reset_controller" -library "pll_clock" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "pll_clock" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "pll_clock" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "pll_clock_altpll_0" -library "pll_clock" -name IP_TOOL_NAME "altpll"
+set_global_assignment -entity "pll_clock_altpll_0" -library "pll_clock" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "pll_clock_altpll_0" -library "pll_clock" -name IP_TOOL_ENV "Qsys"
